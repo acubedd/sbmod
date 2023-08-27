@@ -24,8 +24,10 @@ public class SkyblockHelper
         System.out.println("DIRT BLOCK >> "+Blocks.dirt.getUnlocalizedName());
     }
 
+
     @SubscribeEvent
     public void onLogin(PlayerEvent.PlayerLoggedInEvent e) {
-        ChatUtils.sendMessageToPlayer((EntityPlayerMP) e.player, "Welcome");
+        ChatUtils.sendMessageToPlayer((EntityPlayerMP) e.player, "commands and info for mod to be added");
     }
+
 }
