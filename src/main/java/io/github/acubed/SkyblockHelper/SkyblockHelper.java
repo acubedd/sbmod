@@ -21,7 +21,6 @@ public class SkyblockHelper
     public void init(FMLInitializationEvent e)
     {
 		MinecraftForge.EVENT_BUS.register(this);
-        System.out.println("DIRT BLOCK >> "+Blocks.dirt.getUnlocalizedName());
     }
 
 
