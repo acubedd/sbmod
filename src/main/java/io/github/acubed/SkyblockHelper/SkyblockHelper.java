@@ -1,6 +1,6 @@
 package io.github.acubed.SkyblockHelper;
 
-import io.github.acubed.SkyblockHelper.events.loginHandler;
+import io.github.acubed.SkyblockHelper.events.LoginHandler;
 import io.github.acubed.SkyblockHelper.proxy.ClientProxy;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -26,7 +26,7 @@ public class SkyblockHelper
     @EventHandler
     public void init(FMLInitializationEvent e)
     {
-		MinecraftForge.EVENT_BUS.register(new loginHandler());
+		MinecraftForge.EVENT_BUS.register(new LoginHandler());
     }
 
     @EventHandler
