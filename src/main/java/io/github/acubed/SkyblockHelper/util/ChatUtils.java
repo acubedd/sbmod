@@ -7,12 +7,8 @@ import net.minecraft.util.ChatComponentText;
 public class ChatUtils {
     public static void sendMessageToPlayer(String message) {
         EntityPlayer player = Minecraft.getMinecraft().thePlayer;
-
         if (player != null) {
             player.addChatMessage(new ChatComponentText(message));
-        }
-        else {
-            
         }
     }
 }
