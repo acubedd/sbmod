@@ -2,6 +2,7 @@ package io.github.acubed.SkyblockHelper;
 
 import io.github.acubed.SkyblockHelper.gui.ClickGUI;
 import io.github.acubed.SkyblockHelper.handlers.LoginHandler;
+import io.github.acubed.SkyblockHelper.modules.NetherWart;
 import io.github.acubed.SkyblockHelper.proxy.ClientProxy;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
@@ -37,6 +38,7 @@ public class SkyblockHelper
     {
         MinecraftForge.EVENT_BUS.register(this);
 		MinecraftForge.EVENT_BUS.register(new LoginHandler());
+        MinecraftForge.EVENT_BUS.register(new NetherWart());
 
         keyBindings[0] = new KeyBinding("Open Config Menu", 157, "Skyblock Helper Mod");
         for (KeyBinding keyBinding : keyBindings) {
