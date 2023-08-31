@@ -1,4 +1,4 @@
-package io.github.acubed.SkyblockHelper.events;
+package io.github.acubed.SkyblockHelper.handlers;
 
 import io.github.acubed.SkyblockHelper.util.ChatUtils;
 import net.minecraftforge.event.world.WorldEvent;
@@ -6,7 +6,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 import net.minecraftforge.fml.common.network.FMLNetworkEvent.ClientConnectedToServerEvent;
 
-public class loginHandler {
+public class LoginHandler {
     private boolean worldLoaded = false;
     private boolean clientConnected = false;
 
