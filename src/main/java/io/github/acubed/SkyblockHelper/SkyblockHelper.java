@@ -20,9 +20,6 @@ import net.minecraftforge.fml.common.gameevent.InputEvent;
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
 public class SkyblockHelper
 {
-
-    public static KeyBinding[] keyBindings = new KeyBinding[1];
-
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS)
     public static ClientProxy proxy;
 
