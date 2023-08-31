@@ -1,4 +1,4 @@
-package io.github.acubed.SkyblockHelper.events;
+package io.github.acubed.SkyblockHelper.handlers;
 
 import io.github.acubed.SkyblockHelper.util.ChatUtils;
 import net.minecraftforge.event.world.WorldEvent;
