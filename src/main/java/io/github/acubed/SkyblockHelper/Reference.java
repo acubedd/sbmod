@@ -7,5 +7,7 @@ public class Reference {
     public static final String ACCEPTED_VERSIONS = "1.8.9";
 
     public static final String CLIENT_PROXY_CLASS = "io.github.acubed.SkyblockHelper.proxy.ClientProxy";
-    public static final String SERVER_PROXY_CLASS = "io.github.acubed.SkyblockHelper.proxy.CommonProxy";
+    
+    public static final int KEY = 157;
+
 }

@@ -1,6 +1,7 @@
 package io.github.acubed.SkyblockHelper;
 
 import io.github.acubed.SkyblockHelper.gui.ClickGUI;
+import io.github.acubed.SkyblockHelper.handlers.InputHandler;
 import io.github.acubed.SkyblockHelper.handlers.LoginHandler;
 import io.github.acubed.SkyblockHelper.modules.NetherWart;
 import io.github.acubed.SkyblockHelper.proxy.ClientProxy;
@@ -36,26 +37,13 @@ public class SkyblockHelper
     @EventHandler
     public void init(FMLInitializationEvent e)
     {
-        MinecraftForge.EVENT_BUS.register(this);
-		MinecraftForge.EVENT_BUS.register(new LoginHandler());
+        MinecraftForge.EVENT_BUS.register(new InputHandler());
+        MinecraftForge.EVENT_BUS.register(new LoginHandler());
         MinecraftForge.EVENT_BUS.register(new NetherWart());
-
-        keyBindings[0] = new KeyBinding("Open Config Menu", 157, "Skyblock Helper Mod");
-        for (KeyBinding keyBinding : keyBindings) {
-            ClientRegistry.registerKeyBinding(keyBinding);
-        }
     }
 
     @EventHandler
     public void postInit(FMLInitializationEvent e)
     {
-    }
-
-    @SubscribeEvent
-    public void onKeyPress(InputEvent.KeyInputEvent e)
-    {
-        if (keyBindings[0].isPressed()) {
-            Minecraft.getMinecraft().displayGuiScreen(new ClickGUI());
-        }
     }
 }
