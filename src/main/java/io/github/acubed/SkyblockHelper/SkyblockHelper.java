@@ -1,8 +1,10 @@
 package io.github.acubed.SkyblockHelper;
 
-import io.github.acubed.SkyblockHelper.handlers.InputHandler;
 import io.github.acubed.SkyblockHelper.handlers.LoginHandler;
+import io.github.acubed.SkyblockHelper.modules.macros.MacroHandler;
+import io.github.acubed.SkyblockHelper.modules.macros.Sugarcane;
 import io.github.acubed.SkyblockHelper.proxy.ClientProxy;
+import io.github.acubed.SkyblockHelper.util.KeybindUtils;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -27,8 +29,11 @@ public class SkyblockHelper
     @EventHandler
     public void init(FMLInitializationEvent e)
     {
-        MinecraftForge.EVENT_BUS.register(new InputHandler());
+        KeybindUtils.setup();
         MinecraftForge.EVENT_BUS.register(new LoginHandler());
+        MinecraftForge.EVENT_BUS.register(new KeybindUtils());
+        MinecraftForge.EVENT_BUS.register(new Sugarcane());
+        MinecraftForge.EVENT_BUS.register(new MacroHandler());
 
     }
 

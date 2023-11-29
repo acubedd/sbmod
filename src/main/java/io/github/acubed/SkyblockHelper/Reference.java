@@ -8,6 +8,7 @@ public class Reference {
 
     public static final String CLIENT_PROXY_CLASS = "io.github.acubed.SkyblockHelper.proxy.ClientProxy";
     
-    public static final int KEY = 157;
+    public static final int OPEN_GUI_KEY = 157; // RCTRL key
+    public static final int SCRIPT_KEY = 41; // ` (grave) key
 
 }

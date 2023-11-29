@@ -6,4 +6,6 @@ public class Buttons {
     public static boolean netherWart = false;
     public static boolean autoSell = true;
     public static boolean banChecker = true;
+
+
 }

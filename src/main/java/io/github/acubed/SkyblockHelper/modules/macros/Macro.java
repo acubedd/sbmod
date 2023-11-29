@@ -1,16 +1,11 @@
-package io.github.acubed.SkyblockHelper.modules;
+package io.github.acubed.SkyblockHelper.modules.macros;
 
-public class Module {
-    private boolean toggled = false;
-
-    public boolean isToggled() {
-        return this.toggled;
-    }
+public abstract class Macro {
+    public boolean enabled = false;
 
     public void toggle() {
-        this.toggled = !this.toggled;
-
-        if (this.toggled) {
+        this.enabled = !this.enabled;
+        if (this.enabled) {
             onEnable();
         } else {
             onDisable();
